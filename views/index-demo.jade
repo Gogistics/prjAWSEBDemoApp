@@ -1,8 +1,8 @@
 extends layout-demo
 
 block content
-  #preloader
-    #load
+  div(id="preloader")
+    div(id="load")
 
   nav(class="navbar navbar-custom navbar-fixed-top" role="navigation")
     div(class="container")
@@ -42,12 +42,12 @@ block content
               li
                 a(href="/?lang=traditional_chinese") Traditional Chinese
               li
-                a(href="#english") English
+                a(href="/?lang=english") English
 
   // section ; intro
   section(id="intro" class="intro")
     div(class="slogan")
-      h4 WE ARE A BUSINESS CONSULTING COMPANY FOCUSED ON DEVELOPMENT OF CLOUD APPLICATIONS
+      h4 #{intro}
     div(class="page-scroll")
       a(href="#service" class="btn btn-circle")
         i(class="fa fa-angle-double-down animated")
@@ -158,7 +158,7 @@ block content
       div(class="row")
         div(class="col-lg-9")
           div(class="boxed-grey")
-            form(id="contact_form" action="/email_us" method="post")
+            form(id="contact_form" action="/services/send_email" method="post")
               div(class="row")
                 div(class="col-md-6")
                   div(class="form-group")

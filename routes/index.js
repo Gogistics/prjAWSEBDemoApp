@@ -11,6 +11,7 @@ jsonfile.readFile('./my_dicts/index.json', function(err, obj) {
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  // get lang query
   var lang;
   if( req.query.hasOwnProperty('lang') ){
     lang = req.query.lang;
@@ -22,8 +23,13 @@ router.get('/', function(req, res, next) {
     lang = 'english';
   }
 
-  console.log(index_info[lang]['title']);
-  res.render('index-demo', { title : index_info[lang]['title'] });
+  // set page info
+  var page_info = {
+    title : index_info[lang]['title'],
+    intro : index_info[lang]['intro']
+  };
+
+  res.render('index-demo', page_info);
 });
 
 module.exports = router;

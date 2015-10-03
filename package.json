@@ -19,6 +19,7 @@
     "bower": "*",
     "jquery": "*",
     "jsonfile": "*",
+    "mandrill-api": "*",
 
     "ejs": "*",
     "ejs-locals": "*",

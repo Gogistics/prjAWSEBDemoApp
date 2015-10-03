@@ -5,7 +5,6 @@
 		jQuery("#load").delay(100).fadeOut("slow");
 	});
 
-
 	//jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
 		if ($(".navbar").offset().top > 50) {
@@ -40,7 +39,6 @@
             var sender_email = $('#sender_email').val();
             var email_subject = $('#email_subject').val();
             var email_message = $('#email_message').val();
-			var csrf = $('#contact_form input[name=csrfmiddlewaretoken]').val();
             
             if( !is_email_mechanism_triggered &&
                 sender_name !== '' &&
@@ -60,10 +58,9 @@
                         sender_email : sender_email,
                         email_subject : email_subject,
                         email_message : email_message,
-                        csrfmiddlewaretoken : csrf,
                     },
                     type: 'POST', // GET or POST
-                    url: '/email_us', // the file to call
+                    url: '/services/send_email', // the file to call
                     success: function(res) { // on success..
                         console.log(res);
                         if(res.email_status === 'successful'){

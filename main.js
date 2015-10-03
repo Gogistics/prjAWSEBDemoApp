@@ -9,8 +9,11 @@ var bodyParser = require('body-parser');
 // dispatchers
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var services = require('./routes/services');
+
 var tests = require('./routes/tests');
 
+// express app
 var app = express();
 
 // view engine setup
@@ -25,12 +28,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap', express.static(path.join(__dirname, '/node_modules/bootstrap/dist'))); // set bootstrap path
 app.use('/jq', express.static(path.join(__dirname, '/node_modules/jquery/dist'))); // set jquery path
+app.use('/handsontable', express.static(path.join(__dirname, '/bower_components/handsontable/dist'))); // set jquery path
 
 /* urls */
 // dispatchers, or routers; forward requests to handlers
 app.use('/', routes);
 app.use('/users', users);
 app.use('/test', tests);
+app.use('/services', services);
 
 /* error handler */
 // catch 404 and forward to error handler
