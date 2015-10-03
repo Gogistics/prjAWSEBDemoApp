@@ -11,7 +11,7 @@ block content
         button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse")
           i(class="fa fa-bars")
         a(class="navbar-brand" href="/")
-          h1 Gogistics
+          h1 #{title}
 
       div(class="collapse navbar-collapse navbar-right navbar-main-collapse")
         ul(class="nav navbar-nav")
@@ -40,7 +40,7 @@ block content
               b(class="caret")
             ul(class="dropdown-menu")
               li
-                a(href="#traditional_chinese") Traditional Chinese
+                a(href="/?lang=traditional_chinese") Traditional Chinese
               li
                 a(href="#english") English
 
