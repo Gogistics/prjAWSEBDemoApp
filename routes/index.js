@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
   // set page info
   var page_info = {
     title : index_info[lang]['title'],
-    intro : index_info[lang]['intro']
+    intro : index_info[lang]['intro'],
   };
 
   res.render('index-demo', page_info);
