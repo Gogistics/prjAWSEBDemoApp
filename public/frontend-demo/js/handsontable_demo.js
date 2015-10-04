@@ -12,12 +12,12 @@ $(function(){
       type: 'POST', // GET or POST
       url: '/services/get_demo_data', // the file to call
       success: function(res) { // on success..
-        console.log(res);
+        // console.log(res);
         if(res.req_status === true){
-          var financeData = res.index_data;
+          var finance_data = res.index_data;
 
           var hot = new Handsontable(container, {
-            data: financeData,
+            data: finance_data,
             height: 396,
             colHeaders: ["Price", "Date", "1D Chg", "YTD Chg", "Vol BTC"],
             rowHeaders: true,
@@ -25,13 +25,20 @@ $(function(){
             columnSorting: true,
             contextMenu: true,
             columns: [
-              {type: 'numeric', format: '$0,0.00'},
+              {type: 'text', format: '$0,0.00'},
               {type: 'date', dateFormat: 'DD/MM/YYYY', correctFormat: true},
-              {type: 'numeric', format: '0.00%'},
-              {type: 'numeric', format: '0.00%'},
-              {type: 'numeric', format: '0.00'}
+              {type: 'text', format: '0.00%'},
+              {type: 'text', format: '0.00%'},
+              {type: 'text', format: '0.00'}
             ]
           });
+
+          // auto-update mechanism
+          $('div#finance_example').keyup(function(){
+            console.log(finance_data);
+          });
+
+          // click listener (incomplete)
 
         }else{
           throw "fail to get data from mongodb";

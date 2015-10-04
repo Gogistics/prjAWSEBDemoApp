@@ -37,11 +37,9 @@ var config = {
 };
 var db_path = config.HOST + '/' + config.DB;
 var db = monk(db_path);
-var greetings = db.get('greetings'); // for testing
-
-var demo_data = db.get('demo_data');
-var init_demo_data_set = function(arg_data){
-
+var init_demo_data_set = function(){
+  // insert function
+  var demo_data = db.get('demo_data');
   var insert_data_if_not_exist = function(arg_docs, arg_collection){
     if(arg_docs.length === 0){
       var finance_data = [
@@ -71,21 +69,22 @@ var init_demo_data_set = function(arg_data){
     }
   };
 
-  arg_data.find({}, function(err, docs){
+  demo_data.find({}, function(err, docs){
     if(err){
       throw err;
     }else{
       // insert data if not exist
-      insert_data_if_not_exist(docs, arg_data);
+      insert_data_if_not_exist(docs, demo_data);
     }
   });
 };
 
 // init data
-init_demo_data_set(demo_data);
+init_demo_data_set();
 
 // retrive data from mongodb and pass to fornt-end
 router.post('/get_demo_data', function(req, res, next){
+  var demo_data = db.get('demo_data');
   var finance_data = demo_data.findById('56117ea936bdfc9b1275df18', function(err, doc){
     if(err){
       throw err;
@@ -100,8 +99,27 @@ router.post('/get_demo_data', function(req, res, next){
   });
 });
 
+router.post('/update_demo_data_of_index_page', function(req, res, next){
+  // get req info
+  var updated_demo_data = req.body.updated_demo_data;
+
+  //
+  var demo_data = db.get('demo_data');
+  demo_data.updateById('56117ea936bdfc9b1275df18', updated_demo_data, function(err, doc){
+    //
+    if(err){
+      throw err;
+    }else{
+      console.log(doc);
+    }
+  });
+});
+
 /* GET users listing. */
 router.post('/send_email', function(req, res, next) {
+  // get req info
+  console.log(req.body);
+
   // create a variable for the API call parameters
   var params = {
       "message": {

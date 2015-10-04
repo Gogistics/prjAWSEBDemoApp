@@ -35,10 +35,10 @@
         var is_email_mechanism_triggered = false;
         $('#contact_form').submit(function(event){
             event.preventDefault();
-            var sender_name = $('#sender_name').val();
-            var sender_email = $('#sender_email').val();
-            var email_subject = $('#email_subject').val();
-            var email_message = $('#email_message').val();
+            var sender_name = $('#sender_name').val().trim();
+            var sender_email = $('#sender_email').val().trim();
+            var email_subject = $('#email_subject').val().trim();
+            var email_message = $('#email_message').val().trim();
             
             if( !is_email_mechanism_triggered &&
                 sender_name !== '' &&
