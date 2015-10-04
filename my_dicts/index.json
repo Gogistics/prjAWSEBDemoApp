@@ -23,10 +23,19 @@
         "contact": "Get in touch",
         "contact_description": "Contact us, connect the world",
         "contact_info": { "contact_name_field": "Name", "contact_enter_name_field": "Enter Name" },
-        "footer_copyright": "&copy;Copyright 2015 - Gogistics Ltd. All rights reserved."
+        "footer_copyright": "&#64; Copyright 2015 - Gogistics Ltd. All rights reserved."
     },
     "traditional_chinese" : {
         "title" : "資雲科技",
-        "intro" : "我們提供雲端開發應用服務及諮詢"
+        "nav_home": "首頁",
+        "nav_services": "服務",
+        "nav_about": "關於我們",
+        "nav_partners": "合作夥伴",
+        "nav_contact": "聯繫我們",
+        "nav_dropdwon_languages": "語言",
+        "nav_dropdown_traditional_chinese": "繁中",
+        "nav_dropdown_english": "英文",
+        "intro" : "我們提供雲端開發應用服務及諮詢",
+        "footer_copyright": "&#64; 2015 - 資雲科技有限公司 版權所有"
     }
 }

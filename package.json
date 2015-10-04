@@ -20,7 +20,7 @@
     "jsonfile": "*",
     "mandrill-api": "*",
 
-    "mongodb":"*",
+    "mongodb":"1.4.x",
     "monk": "*",
     "mongoose": "*",
 
