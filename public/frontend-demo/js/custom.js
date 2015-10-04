@@ -52,7 +52,7 @@
                 // popup cover
                 jQuery("#preloader").delay(50).fadeIn("slow");
                 
-                 $.ajax({ // create an AJAX call...
+                $.ajax({ // create an AJAX call...
                     data: {
                         sender_name : sender_name,
                         sender_email : sender_email,

@@ -25,16 +25,14 @@ var Greeting = mongoose.model('Greeting', greetingSchema);
 db = mongoose.connect(dbPath).connection;
 db.on('error', function(err) { console.log(err.message); });
 db.once('open', function() {
-  console.log("mongodb connection open");
-
-  //
+    console.log("mongodb connection open by mongoose");
   	var greeting;
 	  Greeting.find( function(err, greetings){
-	  	console.log(greetings);
+	  	// console.log(greetings);
 	   if( greetings !== undefined && greetings.length <= 0 ){     
 	      greeting = new Greeting({ sentence: standardGreeting }); 
 	      greeting.save();
-	      console.log(greeting);
+	      // console.log(greeting);
 	    } 
 	  });
 	});

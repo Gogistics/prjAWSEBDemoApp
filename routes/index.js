@@ -6,10 +6,11 @@ var jsonfile = require('jsonfile');
 var index_info;
 jsonfile.readFile('./my_dicts/index.json', function(err, obj) {
   index_info = obj;
-  console.log(obj);
+  // console.log(obj);
 })
 
 /* GET users listing. */
+// index page
 router.get('/', function(req, res, next) {
   // get lang query
   var lang;
