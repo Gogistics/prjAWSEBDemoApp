@@ -27,6 +27,7 @@ router.get('/', function(req, res, next) {
   var page_info = {
     title : index_info[lang]['title'],
     intro : index_info[lang]['intro'],
+    footer_copyright : index_info[lang]['footer_copyright']
   };
 
   res.render('index-demo', page_info);

@@ -46,7 +46,6 @@ router.get('/', function(req, res, next) {
     // res.send(greeting.sentence);
     res.render('index', { title: 'Express: ' + greeting.sentence });
   });
-  // res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
