@@ -1,4 +1,8 @@
 /* services */
+var express = require('express');
+var router = express.Router();
+
+// mandrill email service
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill('Mve9Ww6fxCoLOGitjaQmZQ');
 mandrill_client.users.info({}, function(result) {
@@ -8,8 +12,22 @@ mandrill_client.users.info({}, function(result) {
     console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 });
 
-var express = require('express');
-var router = express.Router();
+// mongodb
+var mongoose = require('mongoose');
+var config = {
+  'USER': '',
+  'PASS': '',
+  'HOST': 'ec2-54-200-66-54.us-west-2.compute.amazonaws.com',
+  'PORT': '27017',
+  'DATABASE': 'moneysedge'
+};
+var dbPath = 'mongodb://' + 
+            config.HOST + '/' +
+            config.DATABASE;
+
+var db = mongoose.connect(dbPath).connection;
+db.on('error', function(err) { console.log(err.message); });
+
 
 /* GET users listing. */
 router.post('/send_email', function(req, res, next) {

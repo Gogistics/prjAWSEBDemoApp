@@ -1,7 +1,7 @@
 /* handsontable for demo */
 $(function(){
-	var container = document.getElementById('finance_example');
-    var data = function () {
+  var container = document.getElementById('finance_example');
+  var data = function () {
     return Handsontable.helper.createSpreadsheetData(100, 12);
   };
   
