@@ -6,7 +6,7 @@ var router = express.Router();
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill('Mve9Ww6fxCoLOGitjaQmZQ');
 mandrill_client.users.info({}, function(result) {
-    console.log(result);
+    // console.log(result);
 }, function(e) {
     // Mandrill returns the error as an object with name and message keys
     console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
