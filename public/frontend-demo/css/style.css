@@ -713,9 +713,12 @@ Parallax
     margin-top: 0;
 }
 
+/* handsontable */
+.custom_table{
+  overflow: auto;
+}
 
 /* Media queries */
-
 @media(min-width:767px) {
 
     .navbar {

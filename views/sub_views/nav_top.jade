@@ -1,0 +1,40 @@
+// top navbar
+nav(class="navbar navbar-custom navbar-fixed-top" role="navigation")
+  div(class="container")
+
+    div(class="navbar-header page-scroll")
+      button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse")
+        i(class="fa fa-bars")
+      a(class="navbar-brand" href="/")
+        h1 #{title}
+
+    div(class="collapse navbar-collapse navbar-right navbar-main-collapse")
+      ul(class="nav navbar-nav")
+        li(class="active")
+          a(href="#intro" class="hidden-xs") Home
+          a(href="#intro" class="visible-xs" data-toggle="collapse" data-target=".navbar-main-collapse") Home
+
+        li
+          a(href="#service" class="hidden-xs") Services
+          a(href="#service" class="visible-xs" data-toggle="collapse" data-target=".navbar-main-collapse") Service
+
+        li
+          a(href="#about" class="hidden-xs") About
+          a(href="#about" class="visible-xs" data-toggle="collapse" data-target=".navbar-main-collapse") About
+
+        li
+          a(href="#partners" class="hidden-xs") Partners
+          a(href="#partners" class="visible-xs" data-toggle="collapse" data-target=".navbar-main-collapse") Partners
+
+        li
+          a(href="#contact" class="hidden-xs") Contact
+          a(href="#contact" class="visible-xs" data-toggle="collapse" data-target=".navbar-main-collapse") Contact
+
+        li
+          a(href="#" class="dropdown-toggle" data-toggle="dropdown") Languages
+            b(class="caret")
+          ul(class="dropdown-menu")
+            li
+              a(href="/?lang=traditional_chinese") Traditional Chinese
+            li
+              a(href="/?lang=english") English
