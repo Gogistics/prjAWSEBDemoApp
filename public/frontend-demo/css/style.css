@@ -718,6 +718,10 @@ Parallax
   overflow: auto;
 }
 
+.custom_finance_table{
+  margin-top: 20px;
+}
+
 /* Media queries */
 @media(min-width:767px) {
 

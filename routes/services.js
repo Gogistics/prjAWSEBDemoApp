@@ -85,7 +85,7 @@ init_demo_data_set();
 // retrive data from mongodb and pass to fornt-end
 router.post('/get_demo_data', function(req, res, next){
   var demo_data = db.get('demo_data');
-  var finance_data = demo_data.findById('56117ea936bdfc9b1275df18', function(err, doc){
+  var finance_data = demo_data.findById('5611e421e5f35c2503a44d3b', function(err, doc){
     if(err){
       throw err;
     }else{
@@ -101,11 +101,14 @@ router.post('/get_demo_data', function(req, res, next){
 
 router.post('/update_demo_data_of_index_page', function(req, res, next){
   // get req info
-  var updated_demo_data = req.body.updated_demo_data;
+  var updated_data = [];
+  for(var key in req.body){
+    updated_data.push(req.body[key]);
+  }
+  console.log(updated_data);
 
-  //
   var demo_data = db.get('demo_data');
-  demo_data.updateById('56117ea936bdfc9b1275df18', updated_demo_data, function(err, doc){
+  demo_data.updateById('5611e421e5f35c2503a44d3b', { index_data : updated_data }, function(err, doc){
     //
     if(err){
       throw err;
@@ -113,6 +116,10 @@ router.post('/update_demo_data_of_index_page', function(req, res, next){
       console.log(doc);
     }
   });
+
+  // send res
+  var update_status = { req_status: true };
+  res.json(update_status);
 });
 
 /* GET users listing. */
