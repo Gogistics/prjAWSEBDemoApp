@@ -30,6 +30,13 @@ app.use('/bootstrap', express.static(path.join(__dirname, '/node_modules/bootstr
 app.use('/jq', express.static(path.join(__dirname, '/node_modules/jquery/dist'))); // set jquery path
 app.use('/handsontable', express.static(path.join(__dirname, '/bower_components/handsontable/dist'))); // set jquery path
 
+// setting for flocking.js
+app.use('/flocking_js', express.static(path.join(__dirname, '/bower_components/flocking/dist'))); // set jquery path
+app.use('/test', express.static(path.join(__dirname, '/music_demo/drum-machine'))); // set jquery path
+
+// setting for timbre
+app.use('/timbre.js', express.static(path.join(__dirname, '/node_modules/timbre'))); // set jquery path
+
 /* urls */
 // dispatchers, or routers; forward requests to handlers
 app.use('/', routes);

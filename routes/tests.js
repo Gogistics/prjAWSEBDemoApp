@@ -40,10 +40,20 @@ db.once('open', function() {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	Greeting.findOne(function (err, greeting) {
-    // res.send(greeting.sentence);
-    res.render('index', { title: 'Express: ' + greeting.sentence });
-  });
+	// Greeting.findOne(function (err, greeting) {
+ //    res.render('index', { title: 'Express: ' + greeting.sentence });
+ //  });
+  res.render('music_demo_beatbox', {});
+});
+
+// Flocking
+router.get('/music_demo_drum', function(req, res, next) {
+  res.render('music_demo_drum', {});
+});
+
+// timbre
+router.get('/music_demo_beatbox', function(req, res, next){
+  res.render('music_demo_beatbox', {});
 });
 
 module.exports = router;
