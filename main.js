@@ -35,7 +35,7 @@ app.use('/flocking_js', express.static(path.join(__dirname, '/bower_components/f
 app.use('/test', express.static(path.join(__dirname, '/music_demo/drum-machine'))); // set jquery path
 
 // setting for timbre
-app.use('/timbre.js', express.static(path.join(__dirname, '/javascripts/timbre'))); // set jquery path
+// app.use('/timbre.js', express.static(path.join(__dirname, '/javascripts/timbre'))); // set jquery path
 
 /* urls */
 // dispatchers, or routers; forward requests to handlers
