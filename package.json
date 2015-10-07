@@ -19,7 +19,6 @@
     "jquery": "*",
     "jsonfile": "*",
     "mandrill-api": "*",
-    "timbre": "*",
 
     "mongodb":"1.4.x",
     "monk": "*",
