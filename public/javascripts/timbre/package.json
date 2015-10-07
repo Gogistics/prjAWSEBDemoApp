@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "timbre@*",
+      "/Users/alantai/Desktop/III/node_express"
+    ]
+  ],
+  "_from": "timbre@*",
+  "_id": "timbre@14.11.25",
+  "_inCache": true,
+  "_location": "/timbre",
+  "_npmUser": {
+    "email": "mohayonao@gmail.com",
+    "name": "mohayonao"
+  },
+  "_npmVersion": "1.4.24",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "timbre",
+    "raw": "timbre@*",
+    "rawSpec": "*",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/timbre/-/timbre-14.11.25.tgz",
+  "_shasum": "468d8dae10640dc82f16effd2451e735b18280fa",
+  "_shrinkwrap": null,
+  "_spec": "timbre@*",
+  "_where": "/Users/alantai/Desktop/III/node_express",
+  "author": {
+    "email": "mohayonao@gmail.com",
+    "name": "nao yonamine"
+  },
+  "bugs": {
+    "url": "https://github.com/mohayonao/timbre.js/issues"
+  },
+  "dependencies": {
+    "readable-stream": "^1.0.33",
+    "speaker": "^0.2.1"
+  },
+  "description": "JavaScript library for objective sound programming",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "mocha": "^2.0.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "468d8dae10640dc82f16effd2451e735b18280fa",
+    "tarball": "http://registry.npmjs.org/timbre/-/timbre-14.11.25.tgz"
+  },
+  "gitHead": "04c3f859f4caffb6794b3706c67e625ef1053aee",
+  "homepage": "https://github.com/mohayonao/timbre.js",
+  "installable": true,
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/mohayonao/timbre.js/master/LICENSE"
+    }
+  ],
+  "main": "timbre.node.js",
+  "maintainers": [
+    {
+      "name": "mohayonao",
+      "email": "mohayonao@gmail.com"
+    }
+  ],
+  "name": "timbre",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohayonao/timbre.js.git"
+  },
+  "scripts": {},
+  "version": "14.11.25"
+}
