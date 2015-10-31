@@ -9,7 +9,7 @@
                 ip : '2601:646:c202:8d00:bd46:2495:cf41:856f',
             },
             type: 'POST', // GET or POST
-            url: '/tests/get_ip_geo', // the file to call
+            url: '/test/get_ip_geo', // the file to call
             success: function(res) { // on success..
                 console.log(res);
                 if(res.req_status){
