@@ -39,6 +39,7 @@ db.once('open', function() {
 // end of db
 
 // geoip
+var geoip = require('geoip-lite');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -56,6 +57,13 @@ router.get('/music_demo_beatbox', function(req, res, next){
 });
 
 // geoip
+router.get('/get_geo_ip', function(req, res, next){
+  // send res
+  var update_status = { req_status: true };
+  var ip = '2601:646:c202:8d00:bd46:2495:cf41:856f', geo = geoip.lookup(ip);
+  var update_status = { geo_info : geo};
+  res.json(update_status);
+});
 router.post('/get_geo_ip', function(req, res, next){
   // send res
   var update_status = { req_status: true };

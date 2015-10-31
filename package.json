@@ -20,6 +20,7 @@
     "jsonfile": "*",
     "mandrill-api": "*",
     "geoip": "*",
+    "geoip-lite": "*",
 
     "mongodb":"1.4.x",
     "monk": "*",
