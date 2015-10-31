@@ -59,14 +59,21 @@ router.get('/music_demo_beatbox', function(req, res, next){
 // geoip
 router.get('/get_geo_ip', function(req, res, next){
   // send res
-  var update_status = { req_status: true };
-  var ip = '2601:646:c202:8d00:bd46:2495:cf41:856f', geo = geoip.lookup(ip);
-  var update_status = { geo_info : geo};
-  res.json(update_status);
+  res.render('ip_geo', {});
 });
-router.post('/get_geo_ip', function(req, res, next){
+
+// pass query result
+router.post('/get_ip_geo', function(req, res, next){
   // send res
-  var update_status = { req_status: true };
+  var ip = req.body['ip'], token = req.body['token'], geo = 'NA', update_status = {};
+  if(token === 'dWEF43tHwFfgG51ASeFg5087rtRBR'){
+    //
+    geo = geoip.lookup(ip);
+    update_status['geo'] = geo;
+    update_status['req_status'] = true;
+  }else{
+    update_status['req_status'] = false;
+  }
   res.json(update_status);
 });
 
