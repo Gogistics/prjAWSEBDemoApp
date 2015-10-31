@@ -19,6 +19,7 @@
     "jquery": "*",
     "jsonfile": "*",
     "mandrill-api": "*",
+    "geoip": "*",
 
     "mongodb":"1.4.x",
     "monk": "*",

@@ -11,7 +11,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var services = require('./routes/services');
 
-var tests = require('./routes/tests');
+var tests = require('./routes/tests'); // for test only
 
 // express app
 var app = express();

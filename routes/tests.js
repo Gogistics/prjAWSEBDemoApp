@@ -36,7 +36,17 @@ db.once('open', function() {
 	    } 
 	  });
 	});
-// db
+// end of db
+
+// geoip
+var geoip = require("geoip");
+
+// ipv4
+var ipv4_country = new geoip.Country('../my_geoip/GeoIP.dat');
+
+// ipv6
+var ipv6_country = new geoip.Country('../my_geoip/GeoIPv6.dat');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -55,6 +65,8 @@ router.get('/music_demo_drum', function(req, res, next) {
 router.get('/music_demo_beatbox', function(req, res, next){
   res.render('music_demo_beatbox', {});
 });
+
+// geoip
 
 module.exports = router;
 
