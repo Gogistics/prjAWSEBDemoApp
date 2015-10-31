@@ -57,7 +57,7 @@ router.get('/music_demo_beatbox', function(req, res, next){
 });
 
 // geoip
-router.get('/get_geo_ip', function(req, res, next){
+router.get('/get_ip_geo', function(req, res, next){
   // send res
   res.render('ip_geo', {});
 });
