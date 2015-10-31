@@ -37,6 +37,10 @@ app.use('/test', express.static(path.join(__dirname, '/music_demo/drum-machine')
 // setting for timbre
 app.use('/timbre.js', express.static(path.join(__dirname, '/music_demo/timbre'))); // set jquery path
 
+// geoip
+app.use('/geoip', express.static(path.join(__dirname, '/my_geoip'))); // set jquery path
+
+
 /* urls */
 // dispatchers, or routers; forward requests to handlers
 app.use('/', routes);

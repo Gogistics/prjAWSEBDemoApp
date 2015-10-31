@@ -99,6 +99,7 @@ router.post('/get_demo_data', function(req, res, next){
   });
 });
 
+// set post
 router.post('/update_demo_data_of_index_page', function(req, res, next){
   // get req info
   var updated_data = [];
