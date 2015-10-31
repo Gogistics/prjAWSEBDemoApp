@@ -41,12 +41,13 @@ db.once('open', function() {
 // geoip
 var geoip = require("geoip");
 
-// ipv4
+// ipv4 & ipv6 objs for country
 var ipv4_country = new geoip.Country('../my_geoip/GeoIP.dat');
-
-// ipv6
 var ipv6_country = new geoip.Country('../my_geoip/GeoIPv6.dat');
 
+// ipv4 & ipv6 objs for city
+var ipv4_geoip_city = new geoip.City('../my_geoip/GeoLiteCity.dat');
+var ipv6_geoip_city = new geoip.City6('../my_geoip/GeoLiteCityv6.dat');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
